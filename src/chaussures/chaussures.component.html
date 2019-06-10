@@ -1,0 +1,22 @@
+
+   <div class="container">
+      <div class="row">
+        <div class="col-md" id="carte"   *ngFor="let chaussure of maListeDeChaussures">
+            <img src="{{chaussure.photoUrl }}" alt="Card image cap" style="height: 13rem;"/>
+            <mdb-card-body>
+                <mdb-card-title>
+                  <h4>Nom: {{ chaussure.nom }}</h4>
+                </mdb-card-title>
+                <p>Marque: {{ chaussure.marque }}</p>
+                <p>Couleur: {{ chaussure.couleur }}</p>
+                <p>Taille : {{ chaussure.taille }}</p>
+                    <span class="float-left font-weight-bold">
+                      <strong>{{ chaussure.prix | currency: "EUR" }}</strong>
+                    </span>
+                    <span class="float-right">
+                        <button type="button" mdbBtn color="primary" mdbWavesEffect>Acheter</button>
+                      </span>
+              </mdb-card-body>
+        </div>
+      </div>
+    </div>
